@@ -30,7 +30,9 @@ const Accordion = ({ data, isCollapsed, onClick }) => {
 
       <div
         className={`${
-          isCollapsed ? "leading-[0] max-h-[0px] opacity-0" : "leading-normal"
+          isCollapsed
+            ? "leading-[0] max-h-[0px] opacity-0 hidden"
+            : "leading-normal"
         } py-2 transition-all duration-[300ms] ease cursor-pointer `}
       >
         <p className="break-words text-left max-w-[100%] text-grey-dark font-light text-[13px] sm:text-lg">
