@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Nunito_Sans, Poppins } from "@next/font/google";
 import HomePage from "./home";
 
 export default function Home() {
