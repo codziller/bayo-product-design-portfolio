@@ -2,7 +2,8 @@ const pages = [
   {
     url: "/",
     title: "Cleand",
-    description: "Cleand",
+    description:
+      "Find reliable cleaning and laundry services at your fingertips from our vetted pool of providers.",
     thumbnail: "",
   },
 ];
