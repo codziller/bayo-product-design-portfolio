@@ -44,6 +44,7 @@ const Vendors = () => {
               className="flex flex-col justify-center items-start gap-[12px] z-[9] px-6 h-[190px] md:h-[230px] slg:h-[202px] "
               ref={(el) => (itemsRef.current[i] = el)}
               onMouseEnter={() => setActiveTab({ image })}
+              onClick={() => setActiveTab({ image })}
             >
               <span className="pb-3">{icon}</span>
               <p className="text-blue-50 font-medium text-base sm:text-lg">
