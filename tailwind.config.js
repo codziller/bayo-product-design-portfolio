@@ -178,6 +178,7 @@ module.exports = {
 
       backgroundImage: {
         hero: "url('/iphone_14_pro_space_black_mockup.png')",
+        hero_image: "url('/hero-image.jpeg')",
         app_store: "url('/app_store.svg')",
         google_play: "url('/google_play.svg')",
         pattern_bg: "url('/pattern_bg.svg')",
