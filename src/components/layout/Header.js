@@ -55,11 +55,11 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-white transition-colors duration-500 ease-in-out website-header flex flex-row justify-between items-center w-full h-[64px] md:h-[84px] px-6 md:px-14 lg:px-16 2xl:px-20 z-50 drop-shadow-[0_0_30px_rgba(0,0,0,0.1)] max-w-9xl mx-auto`}
+      className={`bg-white transition-colors duration-500 ease-in-out website-header flex flex-row justify-between items-center w-full h-[64px] md:h-[84px] px-5 md:px-14 lg:px-16 2xl:px-20 z-50 drop-shadow-[0_0_30px_rgba(0,0,0,0.1)] max-w-9xl mx-auto`}
     >
       <div className="relative flex flex-row justify-between items-center mx-auto w-full">
         <Link
-          className="!my-0 z-[99999] flex items-center justify-start gap-1"
+          className="!my-0 z-[99999] flex items-center justify-start gap-1 ml-[-16px]"
           href="/"
         >
           {sidenavOpen ? (
