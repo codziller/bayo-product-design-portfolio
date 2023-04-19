@@ -7,7 +7,7 @@ const Accordion = ({ data, isCollapsed, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="flex flex-col justify-start items-start w-full transition-all duration-[150ms] ease cursor-pointer "
+      className="flex flex-col justify-start items-start w-full transition-all duration-[300ms] ease cursor-pointer "
     >
       <div
         className={`flex justify-between items-start w-full py-[12px] ${
@@ -22,7 +22,7 @@ const Accordion = ({ data, isCollapsed, onClick }) => {
         <button
           className={`${
             !isCollapsed && "-rotate-90"
-          } transition-all duration-[150ms] ease`}
+          } transition-all duration-[300ms] ease`}
         >
           <Chevron />
         </button>
@@ -31,7 +31,7 @@ const Accordion = ({ data, isCollapsed, onClick }) => {
       <div
         className={`${
           isCollapsed ? "leading-[0] max-h-[0px] opacity-0" : "leading-normal"
-        } py-2 transition-all duration-[150ms] ease cursor-pointer `}
+        } py-2 transition-all duration-[300ms] ease cursor-pointer `}
       >
         <p className="break-words text-left max-w-[100%] text-grey-dark font-light text-[13px] sm:text-lg">
           {answer}
