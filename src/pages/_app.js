@@ -1,14 +1,24 @@
 import "styles/globals.css";
-import "swiper/swiper.min.css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { register } from "swiper/element/bundle";
+
 import { useEffect } from "react";
 import Script from "next/script";
 import { useRouter } from "next/router";
+import { Nunito_Sans, Poppins } from "@next/font/google";
 import * as gtag from "utils/gtag";
 
-register();
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const nunito_sans = Nunito_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-nunito_sans",
+  weight: ["200", "300", "400", "600", "700", "800", "900"],
+});
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -44,8 +54,11 @@ export default function App({ Component, pageProps }) {
      `,
         }}
       />
-
-      <Component {...pageProps} />
+      <main
+        className={`${nunito_sans.variable} ${poppins.variable}  font-nunito_sans`}
+      >
+        <Component {...pageProps} />
+      </main>
     </>
   );
 }

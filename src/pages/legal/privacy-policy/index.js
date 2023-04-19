@@ -52,12 +52,10 @@ const PrivacyPolicyList = () => {
                         : renderBoldText(str.replace(boldIndicator, ""));
                     } else if (str.includes(linkIndicator)) {
                       return str.split(" ").map((linkStr) => {
-                        const linkStrLink = linkStr.includes(
-                          "info@housepadi.com"
-                        )
-                          ? "mailto:info@housepadi.com"
-                          : linkStr.includes("housepadi.com")
-                          ? "https://housepadi.com/"
+                        const linkStrLink = linkStr.includes("info@cleand.com")
+                          ? "mailto:info@cleand.com"
+                          : linkStr.includes("cleand.com")
+                          ? "https://cleand.com/"
                           : "";
                         return linkStr.includes(linkIndicator)
                           ? renderTextLink(

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Loader from "assets/icons/Loader/Loader.svg";
 
 const Button = ({
   type,
@@ -17,7 +16,7 @@ const Button = ({
   fullWidth,
   borderColor,
   textColor,
-  textClass = "",
+  textClass = "text-[15px]",
   height,
   className,
   buttonClass,
@@ -26,7 +25,7 @@ const Button = ({
   const btnClass = `
   flex justify-center items-center
   ${height || "h-[40px] md:h-[44px]"} outline-none
-  rounded-[50px] md:rounded-[60px] px-8 py-2 medium-font
+  rounded-[50px] md:rounded-[60px] px-5 py-1.5 medium-font
   transition-all duration-[700ms] ease-in-out cursor-pointer
   ${fullWidth ? "w-full" : ""}
   whitespace-nowrap ${
@@ -35,7 +34,7 @@ const Button = ({
           isDisabled
             ? "bg-white/[.2]"
             : " hover:bg-blue-clear hover:border-blue-border"
-        } text-black border border-[rgba(0, 0, 0, 0.12)] `
+        } text-blue`
       : whiteBg
       ? `bg-white ${isDisabled ? "bg-white/[.2]" : ""} text-${
           textColor || "grey-text"
@@ -57,9 +56,7 @@ const Button = ({
       href={href}
     >
       {isLoading ? (
-        <div className={btnClass}>
-          <Loader />
-        </div>
+        <div className={btnClass}></div>
       ) : (
         <div className={`${btnClass} space-x-2 ${buttonClass}`}>
           {icon && <div>{icon}</div>}

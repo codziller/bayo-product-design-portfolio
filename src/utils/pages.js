@@ -1,8 +1,8 @@
 const pages = [
   {
     url: "/",
-    title: "Housepadi",
-    description: "Housepadi",
+    title: "Cleand",
+    description: "Cleand",
     thumbnail: "",
   },
 ];

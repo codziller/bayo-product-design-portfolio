@@ -1,22 +1,23 @@
 import Head from "next/head";
-import PrivacyPolicyList from "./legal/privacy-policy";
+import { Nunito_Sans, Poppins } from "@next/font/google";
+import HomePage from "./home";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Housepadi</title>
-        <meta name="description" content="Housepadi" />
+        <title>Cleand</title>
+        <meta name="description" content="Cleand" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Housepadi" />
-        <meta property="og:description" content="Housepadi" />
+        <meta property="og:title" content="Cleand" />
+        <meta property="og:description" content="Cleand" />
         <meta property="og:image" content="" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@housepadi" />
-        <meta name="twitter:creator" content="@housepadi" />
-        <meta name="twitter:title" content="Housepadi" />
-        <meta name="twitter:description" content="Housepadi" />
+        <meta name="twitter:site" content="@Cleand" />
+        <meta name="twitter:creator" content="@Cleand" />
+        <meta name="twitter:title" content="Cleand" />
+        <meta name="twitter:description" content="Cleand" />
         <meta name="twitter:image" content="" />
         <meta name="twitter:image:width" content="1024" />
         <meta name="twitter:image:height" content="512" />
@@ -31,7 +32,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="w-full">
-        <PrivacyPolicyList />
+        <HomePage />
       </main>
     </>
   );

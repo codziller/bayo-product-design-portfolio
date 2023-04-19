@@ -3,155 +3,109 @@
 @tailwind utilities;
 
 @layer components {
-  .housepadi-heading {
-    @apply text-3.8xl;
+  .txt-heading {
+    @apply text-3.2xl;
   }
 
-  .housepadi-heading-alt {
-    @apply text-2xl;
+  .txt-heading-alt {
+    @apply text-xl;
   }
 
-  .housepadi-heading-alt-2 {
+  .txt-heading-alt-2 {
     @apply text-2.5xl;
   }
 
-  .housepadi-title {
-    @apply text-xl-alt;
+  .txt-title {
+    @apply text-15;
   }
 
-  .housepadi-title-2 {
+  .txt-title-2 {
     @apply text-base;
   }
 
-  .housepadi-title-alt {
+  .txt-title-alt {
     @apply text-base;
   }
 
-  .housepadi-lg {
+  .txt-lg {
     @apply text-base;
     @apply leading-relaxed;
   }
 
-  .housepadi-base {
+  .txt-base {
     @apply text-sm;
     @apply leading-normal;
   }
 
-  .housepadi-base-alt {
+  .txt-base-alt {
     @apply text-sm;
   }
 
-  .housepadi-sm-alt {
+  .txt-sm-alt {
     @apply text-xs;
   }
 
-  .housepadi-sm {
+  .txt-sm {
     @apply text-xxs;
   }
 
   @screen md {
-    .housepadi-heading {
+    .txt-heading {
       @apply text-4xl;
     }
 
-    .housepadi-heading-alt {
-      @apply text-3xl;
-    }
-
-    .housepadi-heading-alt-2 {
-      @apply text-3.2xl;
-    }
-
-    .housepadi-title {
+    .txt-heading-alt {
       @apply text-2xl;
     }
 
-    .housepadi-title-2 {
-      @apply text-22px;
+    .txt-heading-alt-2 {
+      @apply text-3.2xl;
     }
 
-    .housepadi-title-alt {
+    .txt-title {
       @apply text-xl-alt;
     }
 
-    .housepadi-lg {
+    .txt-title-2 {
+      @apply text-22px;
+    }
+
+    .txt-title-alt {
+      @apply text-xl-alt;
+    }
+
+    .txt-lg {
       @apply text-xl;
     }
 
-    .housepadi-base {
+    .txt-base {
       @apply text-base;
     }
 
-    .housepadi-base-alt {
+    .txt-base-alt {
       @apply text-lg;
     }
 
-    .housepadi-sm {
+    .txt-sm {
       @apply text-base;
     }
 
-    .housepadi-sm-alt {
+    .txt-sm-alt {
       @apply text-xs;
     }
   }
 
   @screen lg {
-    .housepadi-heading-alt {
-      @apply text-3.5xl;
-    }
 
-    .housepadi-heading-alt-2 {
+
+    .txt-heading-alt-2 {
       @apply text-3.8xl;
     }
   }
 }
 
-@font-face {
-  font-family: "NoirPro";
-  src: url("../assets/fonts/NoirPro-Regular.woff2") format("woff2"),
-    url("../assets/fonts/NoirPro-Regular.woff") format("woff"),
-    url("../assets/fonts/NoirPro-Regular.ttf") format("truetype"),
-    url("../assets/fonts/NoirPro-Regular.eot") format("eot");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "NoirProMedium";
-  src: url("../assets/fonts/NoirPro-Medium.woff2") format("woff2"),
-    url("../assets/fonts/NoirPro-Medium.woff") format("woff"),
-    url("../assets/fonts/NoirPro-Medium.ttf") format("truetype"),
-    url("../assets/fonts/NoirPro-Medium.eot") format("eot");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
 
 
-@font-face {
-  font-family: "NoirProHeavy";
-  src: url("../assets/fonts/NoirPro-Heavy.woff2") format("woff2"),
-    url("../assets/fonts/NoirPro-Heavy.woff") format("woff"),
-    url("../assets/fonts/NoirPro-Heavy.ttf") format("truetype"),
-    url("../assets/fonts/NoirPro-Heavy.eot") format("eot");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-
-@font-face {
-  font-family: "NoirProBold";
-  src: url("../assets/fonts/NoirPro-Bold.woff2") format("woff2"),
-    url("../assets/fonts/NoirPro-Bold.woff") format("woff"),
-    url("../assets/fonts/NoirPro-Bold.ttf") format("truetype"),
-    url("../assets/fonts/NoirPro-Bold.eot") format("eot");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 * {
   font-size: 100%;
@@ -167,42 +121,22 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: NoirPro, Helvetica, sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   /* width: 100%; */
+}
+
+main {
+  scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
 }
 
-h1 {
-  font-family: NoirProBold, Helvetica, sans-serif;
-}
-
-h2,
-h3,
-h4,
-h5 {
-  font-family: NoirPro, Helvetica, sans-serif;
-  font-weight: 100;
-}
-
-h6 {
-  font-family: NoirPro, Helvetica, sans-serif !important;
-  font-weight: 100;
-}
 
 p {
   margin: 0;
-}
-
-.medium-font {
-  font-family: NoirProMedium, Helvetica, sans-serif;
-}
-
-.bold-font {
-  font-family: NoirProBold, Helvetica, sans-serif;
 }
 
 #toolbar {
@@ -253,27 +187,27 @@ p {
 /* End of Custom Loader */
 
 :root {
-  --housepadi-white: #ffffff;
-  --housepadi-green: #02ba81;
-  --housepadi-grey2: #c1c1c1;
-  --housepadi-grey: #65717c;
-  --housepadi-grey3: #e1e1e1;
-  --housepadi-yellow: #f2c94c;
-  --housepadi-warning: #ffb413;
-  --housepadi-red: #f3564d;
-  --housepadi-blue: #5444f2;
-  --housepadi-blue2: #2d9cdb;
+  --txt-white: #ffffff;
+  --txt-green: #02ba81;
+  --txt-grey2: #c1c1c1;
+  --txt-grey: #65717c;
+  --txt-grey3: #e1e1e1;
+  --txt-yellow: #f2c94c;
+  --txt-warning: #ffb413;
+  --txt-red: #f3564d;
+  --txt-blue: #5444f2;
+  --txt-blue2: #2d9cdb;
 }
 
 /* custom styling */
 .text-green {
-  color: var(--housepadi-green);
+  color: var(--txt-green);
 }
 
 input[type="date"].grey-placeholder,
 input[type="text"].grey-placeholder ::placeholder,
 select.grey-placeholder {
-  color: var(--housepadi-grey2);
+  color: var(--txt-grey2);
 }
 
 .h-44 {
@@ -289,20 +223,19 @@ select.grey-placeholder {
 .website-banner-alt,
 .app-vh,
 .usecase-banner {
-  height: calc(100vh - 95px);
+  min-height: calc(75vh - 95px);
 }
 
 
 @media (max-width: 767px) {
   .website-banner {
     height: fit-content;
-    margin-bottom: 75px !important;
     margin-top: 10px !important;
   }
 
   .website-banner-alt {
     height: fit-content;
-    margin-bottom: 20px !important;
+
 
   }
 
@@ -313,6 +246,11 @@ select.grey-placeholder {
   }
 }
 
+.blue-blur-bg {
+  background: linear-gradient(360deg, #B0D8F9 0%, rgba(176, 216, 249, 0) 100%);
+  filter: blur(200px);
+}
+
 .badge {
   height: 8px;
   width: 8px;
@@ -320,27 +258,27 @@ select.grey-placeholder {
 }
 
 .yellow {
-  background-color: var(--housepadi-yellow);
+  background-color: var(--txt-yellow);
 }
 
 .warning-text {
-  color: var(--housepadi-warning);
+  color: var(--txt-warning);
 }
 
 .warning {
-  background-color: var(--housepadi-warning);
+  background-color: var(--txt-warning);
 }
 
 .grey3 {
-  background-color: var(--housepadi-grey3);
+  background-color: var(--txt-grey3);
 }
 
 .green {
-  background-color: var(--housepadi-green);
+  background-color: var(--txt-green);
 }
 
 .red {
-  background-color: var(--housepadi-red);
+  background-color: var(--txt-red);
 }
 
 .one-line {
@@ -358,18 +296,15 @@ table.striped tbody tr:nth-of-type(even) {
 }
 
 table th {
-  font-family: NoirPro;
   font-weight: 300;
-  color: var(--housepadi-grey);
+  color: var(--txt-grey);
 }
 
 table td {
-  font-family: NoirPro;
   font-weight: 300;
 }
 
 .helv-regular {
-  font-family: NoirPro;
   font-weight: 400;
   letter-spacing: 0.2px;
 }
@@ -399,7 +334,7 @@ table td {
 }
 
 /* toast */
-.housepadi-toast {
+.txt-toast {
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -466,6 +401,7 @@ div::-webkit-scrollbar-thumb {
 .hamburger {
   width: 25px;
   height: 1px;
+  border-radius: 20px;
   transition: all 0.15s linear;
   transform-origin: 1px;
 }

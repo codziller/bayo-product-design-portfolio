@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -14,7 +16,7 @@ module.exports = {
     },
     fontSize: {
       "4xl": [
-        "48px",
+        "40px",
         {
           lineHeight: "1.5",
         },
@@ -51,11 +53,12 @@ module.exports = {
           lineHeight: "1.5",
         },
       ],
-      "2xl": ["25px"],
+      "2xl": ["24px"],
       "22px": ["22px"],
       "xl-alt": ["20px"],
       xl: ["18px"],
       lg: ["16px"],
+      15: ["15px"],
       base: ["14px"],
       sm: ["12px"],
       xs: ["10px"],
@@ -64,19 +67,21 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        "helvetica-medium": "'Helvetica-Medium', 'sans-serif'",
+        sans: ["Poppins", ...fontFamily.sans],
+        poppins: ["var(--font-poppins)", ...fontFamily.sans],
+        nunito_sans: ["var(--font-nunito_sans)", ...fontFamily.sans],
       },
       boxShadow: {
         custom: "0px 0px 10px rgba(225, 231, 242, 0.8)",
       },
       colors: {
         blue: {
-          DEFAULT: "#5444F2",
+          DEFAULT: "#0081EB",
           disabled: "#CECBF7",
           hover: "#1921C8",
           "outline-hover": "#eeedfe",
-          fade: "rgba(72, 55, 241, 0.3)",
-          light: "#E6EBFF",
+          50: "#F2F8FF",
+          alt: "#70BAF2",
           backdrop: "rgba(255, 255, 255, 0.02)",
           dull: "rgba(84, 68, 242, 0.1)",
           clear: "rgba(84, 68, 242, 0.11)",
@@ -86,11 +91,12 @@ module.exports = {
         },
         grey: {
           DEFAULT: "#C1C1C1",
+          dark: "#101626",
+          blue: "#54627E",
           alt: "#C2C2C2",
           text: "#65717C",
           whitesmoke: "#f5f6fa",
-          darksmoke: "#2E2E2E",
-          border: "#e7e7e7",
+          border: "#B0B6C3",
           light: "#D0D0D2",
           backdrop: "#7c7c7c",
           ghostwhite: "#f5f6fadc",
@@ -98,8 +104,8 @@ module.exports = {
           light: "#e1e1e1",
           fade: "#444444",
           fadeLight: "#F2F2F2",
-          dark: "#333333",
-          darker: "#999999",
+
+          darker: "#101626",
           darkest: "#151515",
           black: "#151718",
           greyLight: "#d0cfd128",
@@ -126,7 +132,7 @@ module.exports = {
         },
         black: {
           DEFAULT: "#000000",
-          light: "#272626",
+          light: "#3D4451",
           fade: "rgba(0, 0, 0, 0.3)",
         },
       },
@@ -169,7 +175,22 @@ module.exports = {
         "-85px": "-85px",
         "-60px": "-60px",
       },
-      backgroundImage: {},
+
+      backgroundImage: {
+        hero: "url('/iphone_14_pro_space_black_mockup.png')",
+        app_store: "url('/app_store.svg')",
+        google_play: "url('/google_play.svg')",
+        pattern_bg: "url('/pattern_bg.svg')",
+        pattern_bg_2: "url('/pattern_bg_2.svg')",
+        iphone_14_one: "url('/iphone_14_one.png')",
+        iphone_14_two: "url('/iphone_14_two.png')",
+        iphone_14_three: "url('/iphone_14_three.png')",
+        iphone_14_vendor_one: "url('/iphone_14_vendor_one.png')",
+        iphone_14_vendor_two: "url('/iphone_14_vendor_two.png')",
+        iphone_14_vendor_three: "url('/iphone_14_vendor_three.png')",
+        pattern_blue_bg: "url('/pattern_blue.svg')",
+      },
+
       keyframes: {
         slide: {
           "0%": { transform: "translateY(40px)" },
