@@ -12,6 +12,10 @@ export default function Home() {
           as="image"
         />
         <link rel="preload" href="/hero-image.jpeg" as="image" />
+        <link rel="preload" href="/iphone_14_two.png" as="image" />
+        <link rel="preload" href="/iphone_14_vendor_two.png" as="image" />
+        <link rel="preload" href="/iphone_14_three.png" as="image" />
+        <link rel="preload" href="/iphone_14_vendor_three.png" as="image" />
         <meta name="description" content="Cleand" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Cleand" />
