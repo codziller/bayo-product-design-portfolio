@@ -18,7 +18,7 @@ export const useTabs = ({ tabs }) => {
 
   useEffect(() => {
     handleSlide();
-  }, [activeTab]);
+  }, [activeTab, handleSlide]);
 
   const tabsComponent = (onClick) => (
     <div className="w-fit h-fit px-0.5 bg rounded-[50px] bg-blue-50">
@@ -53,24 +53,8 @@ export const useTabs = ({ tabs }) => {
       </div>
     </div>
   );
-  const filterActiveTab = () =>
-    useMemo(() => tabs?.find(({ title }) => title === activeTab), [activeTab]);
-  const filterActiveContent = () =>
-    useMemo(
-      () =>
-        tabs
-          ?.filter(({ title }) => title === activeTab)
-          .map(({ content }, index) => (
-            <div key={index} className="w-full h-full rounded-lg">
-              {content}
-            </div>
-          )),
-      [activeTab]
-    );
 
   return {
-    filterActiveTab,
-    filterActiveContent,
     activeTabIndex,
     tabsComponent,
     setActiveTab,

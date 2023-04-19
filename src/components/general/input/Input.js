@@ -73,7 +73,7 @@ const Input = ({
       setActive(true);
       setAlterBlueBorder(true);
     }
-  }, [prefix]);
+  }, [prefix, type]);
 
   return (
     <div className="w-full">

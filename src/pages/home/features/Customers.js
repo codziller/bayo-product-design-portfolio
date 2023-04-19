@@ -8,23 +8,13 @@ const Customers = () => {
     () => CUSTOMER_DATA?.findIndex(({ image }) => image === activeTab?.image),
     [activeTab]
   );
-  const slideContainerHeight = useMemo(
-    () => itemsRef?.current?.[activeTabIndex]?.getBoundingClientRect()?.height,
-    [activeTabIndex]
-  );
 
   const slidePositionSlg = useMemo(
     () => 202 * activeTabIndex,
-    [activeTabIndex, slideContainerHeight]
+    [activeTabIndex]
   );
-  const slidePositionMd = useMemo(
-    () => 230 * activeTabIndex,
-    [activeTabIndex, slideContainerHeight]
-  );
-  const slidePosition = useMemo(
-    () => 190 * activeTabIndex,
-    [activeTabIndex, slideContainerHeight]
-  );
+  const slidePositionMd = useMemo(() => 230 * activeTabIndex, [activeTabIndex]);
+  const slidePosition = useMemo(() => 190 * activeTabIndex, [activeTabIndex]);
   return (
     <div className="flex flex-col justify-between items-center w-full h-fit md:gap-y-12">
       <div className="flex flex-col justify-between items-start w-full h-fit md:pt-8">
