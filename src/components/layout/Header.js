@@ -97,7 +97,12 @@ const Header = () => {
         </div>
 
         <div className="hidden slg:flex flex-row justify-start items-center space-x-2 pl-2">
-          <Link className="w-full" href="/vendor-sign-up">
+          <Link
+            target="_blank"
+            rel="noreferrer"
+            className="w-full"
+            href="/vendor-sign-up"
+          >
             <Button text="Become a vendor" isOutline />
           </Link>
           <a target="_blank" rel="noreferrer">
@@ -139,7 +144,12 @@ const Header = () => {
           ))}
 
           <div className="flex flex-col justify-start items-center gap-8 w-full">
-            <Link className="w-full" href="/vendor-sign-up">
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              className="w-full"
+              href="/vendor-sign-up"
+            >
               <Button text="Become a vendor" isOutline fullWidth />
             </Link>
             <a target="_blank" rel="noreferrer" className="w-full">
