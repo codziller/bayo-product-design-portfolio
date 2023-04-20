@@ -23,7 +23,7 @@ const Select = ({
   const GOOGLE_MAP_API_KEY = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
   const classNames = `${
     fullWidth ? "w-full" : "w-fit"
-  } h-fit mx-[1px] text-xs border-slate-300 placeholder-slate-400 !placeholder:text-grey cursor-pointer`;
+  } h-fit mx-[1px] text-lg md:text-[13px] border-slate-300 placeholder-slate-400 !placeholder:text-grey cursor-pointer`;
   const styles = {
     control: (base, state) => ({
       ...base,
@@ -36,7 +36,6 @@ const Select = ({
       outline: state.isFocused ? "none !important" : "none !important",
       boxShadow: "none",
       cursor: "pointer",
-      fontSize: "12px",
       backgroundColor: `${style?.background || ""}`,
     }),
 
