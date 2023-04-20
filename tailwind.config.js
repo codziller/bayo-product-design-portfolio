@@ -98,13 +98,14 @@ module.exports = {
           whitesmoke: "#f5f6fa",
           border: "#B0B6C3",
           light: "#D0D0D2",
+          label: "#6B7188",
           backdrop: "#7c7c7c",
           ghostwhite: "#f5f6fadc",
           bordercolor: "#E1E1E1",
           light: "#e1e1e1",
-          fade: "#444444",
+          fade: "#8A93A6",
           fadeLight: "#F2F2F2",
-
+          disabled: "#E3E6EA",
           darker: "#101626",
           darkest: "#151515",
           black: "#151718",
@@ -190,6 +191,7 @@ module.exports = {
         iphone_14_vendor_two: "url('/iphone_14_vendor_two.png')",
         iphone_14_vendor_three: "url('/iphone_14_vendor_three.png')",
         pattern_blue_bg: "url('/pattern_blue.svg')",
+        gloves_image: "url('/gloves_image.jpeg')",
       },
 
       keyframes: {

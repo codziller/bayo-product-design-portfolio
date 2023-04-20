@@ -4,7 +4,7 @@ import Input from "components/general/input/Input";
 const Banner = () => {
   const [email, setEmail] = useState("");
   return (
-    <div className="flex flex-col md:flex-row justify-center md:justify-between items-end space-y-10 md:space-y-0 w-full h-fit md:space-x-8 website-banner pt-[95px] md:pt-[14px] px-5 md:px-[8%] lg:px-[12%] relative bg-grey-darker z-20 overflow-y-hidden bg-pattern_bg bg-center bg-cover bg-no-repeat">
+    <div className="flex flex-col md:flex-row justify-center md:justify-between items-end space-y-10 md:space-y-0 w-full h-fit min-h-[450px] md:space-x-8 website-banner pt-[95px] md:pt-[14px] px-5 md:px-[8%] lg:px-[12%] relative bg-grey-darker z-20 overflow-y-hidden bg-pattern_bg bg-center bg-cover bg-no-repeat">
       <div className="flex flex-col justify-center items-start text-left md:basis-[60%] w-full h-fit z-[5] !ml-0 !mt-0">
         <h1 className="text-blue-50 txt-heading mb-3 md:mb-4 font-poppins font-semibold ">
           About Cleaned
@@ -18,7 +18,7 @@ const Banner = () => {
           Be the first to know when we launch.
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-start items-center w-full gap-4 sm:gap-5 mb-1.5">
+        <div className="flex flex-col sm:flex-row justify-start items-center w-full gap-4 mb-1.5">
           <Input
             type="email"
             placeholder="Enter your email address"
@@ -29,7 +29,7 @@ const Banner = () => {
             href="https://calendly.com/bani-inc/sales/"
             target="_blank"
             rel="noreferrer"
-            className="w-full"
+            className="w-[60%]"
           >
             <Button
               text="Notify me"
@@ -75,7 +75,7 @@ const Banner = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center md:items-end md:basis-[40%] w-full md:max-h-[60vh] relative z-[5]">
-        <div className="flex flex-col justify-center items-center md:items-end w-full h-full min-h-[350px] rounded-[45px] bg-hero bg-contain bg-no-repeat p-0 pb-[calc(100% * 3 / 4)] bg-center z-[8]" />
+        <div className="flex flex-col justify-center items-center md:items-end w-full h-full min-h-[375px] rounded-[45px] bg-hero bg-contain bg-no-repeat p-0 pb-[calc(100% * 3 / 4)] bg-center z-[8]" />
       </div>
     </div>
   );

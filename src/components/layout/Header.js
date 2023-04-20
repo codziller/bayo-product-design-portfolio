@@ -30,7 +30,7 @@ const Header = () => {
     },
     {
       title: "Contact Us",
-      link: "mailto:help@cleand.com",
+      link: "mailto:hello@cleand.com",
     },
   ];
 
@@ -97,9 +97,9 @@ const Header = () => {
         </div>
 
         <div className="hidden slg:flex flex-row justify-start items-center space-x-2 pl-2">
-          <a target="_blank" rel="noreferrer">
+          <Link className="w-full" href="/vendor-sign-up">
             <Button text="Become a vendor" isOutline />
-          </a>
+          </Link>
           <a target="_blank" rel="noreferrer">
             <Button text="Join waitlist" />
           </a>
@@ -139,9 +139,9 @@ const Header = () => {
           ))}
 
           <div className="flex flex-col justify-start items-center gap-8 w-full">
-            <a target="_blank" rel="noreferrer" className="w-full">
+            <Link className="w-full" href="/vendor-sign-up">
               <Button text="Become a vendor" isOutline fullWidth />
-            </a>
+            </Link>
             <a target="_blank" rel="noreferrer" className="w-full">
               <Button text="Join waitlist" className="w-full" />
             </a>

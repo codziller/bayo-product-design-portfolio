@@ -199,7 +199,7 @@ p {
   --txt-blue2: #2d9cdb;
 }
 
-.website-banner::before {
+.hero-section::before {
   content: "";
   background-image: url('/hero-image.jpeg');
   background-size: cover;
@@ -209,7 +209,7 @@ p {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.15;
+  opacity: 0.1
 }
 
 /* custom styling */
@@ -232,12 +232,6 @@ select.grey-placeholder {
   position: fixed;
 }
 
-.website-banner,
-.website-banner-alt,
-.app-vh,
-.usecase-banner {
-  min-height: calc(75vh - 95px);
-}
 
 
 @media (max-width: 767px) {

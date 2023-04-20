@@ -44,7 +44,9 @@ const Button = ({
       : blackBg
       ? `bg-black ${isDisabled ? "bg-black/[.2]" : ""} text-white hover:bg-blue`
       : ` ${
-          isDisabled ? "bg-blue/[.2]" : "bg-blue hover:bg-blue-bright"
+          isDisabled
+            ? "bg-grey-disabled !text-grey-fade"
+            : "bg-blue hover:bg-blue-bright"
         } text-white`
   }`;
   return (

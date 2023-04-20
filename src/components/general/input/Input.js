@@ -76,12 +76,12 @@ const Input = ({
   }, [prefix, type]);
 
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col justify-start items-start gap-[5px]">
       {label && (
         <label
           className={clsx(
             labelClasses,
-            "general-input-label mb-[12px] relative"
+            "general-input-label relative text-grey-dark text-[13px] font-light "
           )}
         >
           {label}{" "}
@@ -94,9 +94,13 @@ const Input = ({
         ref={domNode}
       >
         <div
-          className={`relative h-11 w-full bg-white rounded-lg flex  space-x-1 items-center justify-between  font-normal outline-none capitalize tracking-wider focus:outline-none transition-all duration-150 ease-in-out whitespace-nowrap  text-base leading-relaxed border border-solid shadow-none text-left 
+          className={`relative h-[40px] w-full ${
+            isDisabled ? "bg-grey-disabled !text-grey-fade " : "bg-white"
+          } rounded-[5px] flex  space-x-1 items-center justify-between  font-normal outline-none capitalize tracking-wider focus:outline-none transition-all duration-150 ease-in-out whitespace-nowrap  text-base leading-relaxed border border-solid shadow-none text-left 
         ${
-          error
+          isDisabled
+            ? "border-grey-disabled"
+            : error
             ? "!border-red"
             : active && !alterBlueBorder
             ? "border-blue"
@@ -135,7 +139,7 @@ const Input = ({
                 placeholder={placeholder}
                 thousandSeparator
                 prefix={prefix}
-                className={`p-3 ease-in-out h-full w-full z-10 focus:outline-none focus:border-none rounded-lg bg-transparent placeholder:text-grey`}
+                className={`text-lg md:text-[13px] p-3 ease-in-out h-full w-full z-10 focus:outline-none focus:border-none rounded-[5px] bg-transparent placeholder:text-grey-border`}
                 inputMode="numeric"
                 onValueChange={(number) =>
                   onChangeFunc(number.value, { name, value: number.value })
@@ -160,8 +164,10 @@ const Input = ({
                 onChangeFunc(target.value, { name, value: target.value });
               }}
               placeholder={placeholder}
-              className={`p-3 ease-in-out h-full w-full z-10 focus:outline-none focus:border-none rounded-lg bg-transparent placeholder:text-grey ${
-                !value
+              className={`text-lg md:text-[13px] p-3 ease-in-out h-full w-full z-10 focus:outline-none focus:border-none rounded-[5px] bg-transparent placeholder:text-grey ${
+                isDisabled
+                  ? "bg-grey-disabled text-grey-fade"
+                  : !value
                   ? ""
                   : value?.length > 0 || value > 0
                   ? "text-black"

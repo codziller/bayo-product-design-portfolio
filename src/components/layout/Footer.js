@@ -38,11 +38,11 @@ const Footer = () => {
     {
       title: "Company",
       links: [
-        { title: "About Us", url: "https://blog.cleand.africa" },
-        { title: "Support", url: "https://calendly.com/cleand-inc/sales/" },
+        { title: "About Us", link: "/about-us" },
+        { title: "Support", link: "mailto:help@cleand.com" },
         {
-          title: "Meet our founders.",
-          url: "https://calendly.com/cleand-inc/sales/",
+          title: "Contact Us",
+          link: "mailto:hello@cleand.com",
         },
       ],
     },
@@ -126,7 +126,7 @@ const Footer = () => {
               Be the first to know when we launch.
             </p>
 
-            <div className="flex flex-col justify-start items-center w-full gap-4 sm:gap-5 mb-1.5">
+            <div className="flex flex-col justify-start items-center w-full gap-4 mb-1.5">
               <Input
                 type="email"
                 placeholder="Enter your email address"
