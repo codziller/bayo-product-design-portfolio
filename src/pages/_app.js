@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import { Nunito_Sans, Poppins } from "@next/font/google";
+import Head from "next/head";
 import * as gtag from "utils/gtag";
 
 const poppins = Poppins({
@@ -34,6 +35,56 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <title>Bayo</title>
+        <link
+          rel="preload"
+          href="https://fonts.cdnfonts.com/css/cabinet-grotesk?styles=134960,134961,134957,134958,134959,134955,134956,134954"
+          as="font"
+          type="font/woff"
+        />
+
+        <link
+          rel="preload"
+          href="/iphone_14_pro_space_black_mockup.png"
+          as="image"
+        />
+        <link rel="preload" href="/hero-image.jpeg" as="image" />
+        <link rel="preload" href="/iphone_14_two.png" as="image" />
+        <link rel="preload" href="/iphone_14_vendor_two.png" as="image" />
+        <link rel="preload" href="/iphone_14_three.png" as="image" />
+        <link rel="preload" href="/iphone_14_vendor_three.png" as="image" />
+        <link rel="preload" href="/gloves_image.jpeg" as="image" />
+        <meta name="description" content="Bayo" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Bayo" />
+        <meta
+          property="og:description"
+          content="Find reliable cleaning and laundry services at your fingertips from our vetted pool of providers."
+        />
+        <meta property="og:image" content="" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Bayo" />
+        <meta name="twitter:creator" content="@Bayo" />
+        <meta name="twitter:title" content="Bayo" />
+        <meta
+          name="twitter:description"
+          content="Find reliable cleaning and laundry services at your fingertips from our vetted pool of providers."
+        />
+        <meta name="twitter:image" content="" />
+        <meta name="twitter:image:width" content="1024" />
+        <meta name="twitter:image:height" content="512" />
+        <meta name="twitter:image:alt" content="" />
+
+        <meta name="twitter" content="summary_large_image" />
+        {/* <meta
+          name="“google-site-verification”"
+          content=""
+        /> */}
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         id="gtm-script"
@@ -54,9 +105,7 @@ export default function App({ Component, pageProps }) {
      `,
         }}
       />
-      <main
-        className={`${nunito_sans.variable} ${poppins.variable}  font-nunito_sans`}
-      >
+      <main className="">
         <Component {...pageProps} />
       </main>
     </>

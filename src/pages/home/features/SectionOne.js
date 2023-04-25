@@ -1,76 +1,101 @@
-import React, { useEffect, useRef, useState } from "react";
-
-import { TABS } from "utils/constants";
-import { useTabs } from "hooks/useTabs";
-import Customers from "./Customers";
-import Vendors from "./Vendors";
-
+import Link from "next/link";
+import React, { useState } from "react";
+import { PROJECTS } from "utils/constants";
+import ArrowRight from "assets/icons/arrow-right.svg";
 const SectionOne = () => {
-  const scrollXContainerRef = useRef(null);
-  const customersContainerRef = useRef(null);
-  const vendorsContainerRef = useRef(null);
-  const [width, setWidth] = useState(0);
-  const { setActiveTab, tabsComponent } = useTabs({
-    tabs: TABS,
-  });
+  const [activeItem, setActiveItem] = useState("");
 
-  useEffect(() => {
-    setWidth(window?.innerWidth);
-    function handleResize() {
-      setWidth(window?.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const handleActiveSlideUpdate = () => {
-    const xCustomer = Number(
-      String(
-        customersContainerRef?.current?.getBoundingClientRect()?.x
-      ).replace("-", "")
-    );
-    const xVendor = Number(
-      String(vendorsContainerRef?.current?.getBoundingClientRect()?.x).replace(
-        "-",
-        ""
-      )
-    );
-    if (xCustomer < xVendor) {
-      setActiveTab(TABS[0].title);
-    } else {
-      setActiveTab(TABS[1].title);
-    }
-  };
-  const handleCustomScroll = (i) => {
-    scrollXContainerRef.current.scrollLeft = width * i;
-  };
-
+  const isEven = (i) => !!(i % 2 === 0);
+  const isActive = (item) => !!(item === activeItem);
   return (
-    <div className="flex flex-col justify-start items-center h-fit w-full space-y-7 sticky-boundary sm:mb-[0px] relative bg-grey-dark bg-pattern_bg bg-center bg-cover bg-no-repeat px-5 md:px-[8%] lg:px-[12%]">
-      <div className="flex flex-col justify-between items-center w-full h-fit gap-y-12 sm:mb-[0px] pt-14">
-        {tabsComponent(handleCustomScroll)}
-        <div className="w-full mb-[20px] sm:mb-[10px]">
-          <div
-            className="flex w-full gap-8 md:py-3 md:px-0 no-scrollbar overflow-x-auto scroll-smooth snap-mandatory snap-x"
-            ref={scrollXContainerRef}
-            onScroll={(e) => handleActiveSlideUpdate()}
-          >
+    <div
+      id="projects"
+      className="flex flex-col justify-start items-start  w-full min-h-[500px] mb-[100px] md:gap-x-8 px-5 md:px-[8%] lg:px-[7%]"
+    >
+      <p className="text-grey-dark pb-3 text-[20px] h-[40px] mb-10 pt-12 md:pt-2">
+        Featured Projects
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-24 justify-between items-start w-full">
+        {PROJECTS.map(
+          (
+            {
+              title,
+              source,
+              tags,
+              image,
+              body,
+              button,
+              slug,
+              href,
+              style: { bg, color },
+            },
+            i
+          ) => (
             <div
-              ref={customersContainerRef}
-              className="w-full min-w-[100%] max-w-[100%] snap-center overflow-hidden"
+              key={i}
+              className={`flex flex-col justify-start items-start ${bg} ${
+                isEven(i) ? "rounded-tl-[56px]" : "rounded-tr-[56px]"
+              } w-full px-8 pt-5`}
+              onMouseEnter={() => setActiveItem(title)}
+              onClick={() => setActiveItem(title)}
+              onMouseLeave={() => setActiveItem("")}
             >
-              <Customers />
+              <span className="text-[#7D7D7D] text-base font-thin mb-1.5">
+                {source}
+              </span>
+              <span className="text-black text-[20px] font-medium mb-2">
+                {title}
+              </span>
+              <div
+                className={`flex justify-start items-center w-full gap-2.5 mb-12 `}
+              >
+                {tags.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`flex justify-start items-center gap-2 text-base font-thin ${color}`}
+                  >
+                    <div
+                      className={`w-[8px] h-[8px] bg-[#7D7D7D] rounded-full `}
+                    />{" "}
+                    {item}
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex justify-center items-center w-full h-[370px] relative overflow-hidden">
+                <div
+                  className={`flex flex-col justify-center items-center h-full w-full ${image} bg-contain bg-no-repeat p-0 pb-[calc(100% * 3 / 4)] bg-center`}
+                />
+
+                <div
+                  className={`${
+                    isActive(title) ? "translate-y-[0]" : "translate-y-[400px]"
+                  } transition-transform duration-500 ease-in absolute top-0 left-0 flex flex-col justify-between items-start min-w-[100%] min-h-[100%] ${bg}`}
+                >
+                  <p className="text-black text-[20px] font-light mb-2 leading-[1.9] ">
+                    {body}
+                  </p>
+
+                  <div className="relative w-full h-fit mb-8">
+                    <Link
+                      href={href || `/projects/${slug}`}
+                      className=" flex justify-center items-center gap-2 w-full p-3 bg-white text-center text-[20px] text-black font-normal "
+                      target={href && href !== "#" && "_blank"}
+                      rel={href && href !== "#" && "noreferrer"}
+                    >
+                      {button}
+
+                      <ArrowRight />
+                    </Link>
+                    {href === "#" && (
+                      <div className="min-w-[100%] min-h-[100%] absolute top-0 left-0 z-[9] " />
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div
-              ref={vendorsContainerRef}
-              className="w-full min-w-[100%] max-w-[100%] snap-center overflow-hidden"
-            >
-              <Vendors />
-            </div>
-          </div>
-          <div id="faqs" className="mb-[20px] sm:mb-[70px]" />
-        </div>
+          )
+        )}
       </div>
     </div>
   );

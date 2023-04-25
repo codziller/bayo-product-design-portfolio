@@ -70,13 +70,14 @@ module.exports = {
         sans: ["Poppins", ...fontFamily.sans],
         poppins: ["var(--font-poppins)", ...fontFamily.sans],
         nunito_sans: ["var(--font-nunito_sans)", ...fontFamily.sans],
+        cabinet_grotesk: ["Cabinet Grotesk", ...fontFamily.sans],
       },
       boxShadow: {
         custom: "0px 0px 10px rgba(225, 231, 242, 0.8)",
       },
       colors: {
         blue: {
-          DEFAULT: "#0081EB",
+          DEFAULT: "#5444F2",
           disabled: "#CECBF7",
           hover: "#1921C8",
           "outline-hover": "#eeedfe",
@@ -132,7 +133,7 @@ module.exports = {
           DEFAULT: "transparent",
         },
         black: {
-          DEFAULT: "#000000",
+          DEFAULT: "#222222",
           light: "#3D4451",
           fade: "rgba(0, 0, 0, 0.3)",
         },
@@ -171,6 +172,7 @@ module.exports = {
         "2xs": "475px",
         xs: "540px",
         slg: "910px",
+        xlg: "1100px",
       },
       margin: {
         "-85px": "-85px",
@@ -178,20 +180,25 @@ module.exports = {
       },
 
       backgroundImage: {
-        hero: "url('/iphone_14_pro_space_black_mockup.png')",
-        hero_image: "url('/hero-image.jpeg')",
-        app_store: "url('/app_store.svg')",
-        google_play: "url('/google_play.svg')",
-        pattern_bg: "url('/pattern_bg.svg')",
-        pattern_bg_2: "url('/pattern_bg_2.svg')",
-        iphone_14_one: "url('/iphone_14_one.png')",
-        iphone_14_two: "url('/iphone_14_two.png')",
-        iphone_14_three: "url('/iphone_14_three.png')",
-        iphone_14_vendor_one: "url('/iphone_14_vendor_one.png')",
-        iphone_14_vendor_two: "url('/iphone_14_vendor_two.png')",
-        iphone_14_vendor_three: "url('/iphone_14_vendor_three.png')",
-        pattern_blue_bg: "url('/pattern_blue.svg')",
-        gloves_image: "url('/gloves_image.jpeg')",
+        hero: "url('/images/bayo-img.png')",
+        "virtual-account": "url('/images/virtual-account.png')",
+        "payment-link": "url('/images/payment-link.png')",
+        "3d-exploration": "url('/images/3d-exploration.png')",
+        eco: "url('/images/eco.png')",
+        google: "url('/images/google.png')",
+        kokun: "url('/images/kokun.png')",
+
+        "virtual-account-hero": "url('/images/virtual-account-hero.png')",
+        "va-1": "url('/images/va-1.png')",
+        "va-2": "url('/images/va-2.png')",
+        "va-3": "url('/images/va-3.png')",
+        "pl-hero": "url('/images/pl-hero.png')",
+        "pl-1": "url('/images/pl-1.png')",
+        "pl-2": "url('/images/pl-2.png')",
+        "pl-3": "url('/images/pl-3.png')",
+
+        "hero-about": "url('/images/hero-about.png')",
+        "pl-desktop": "url('/images/pl-desktop.png')",
       },
 
       keyframes: {

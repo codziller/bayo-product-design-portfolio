@@ -1,128 +1,77 @@
-import Handshake from "../../public/handshake.svg";
-import Emoji from "../../public/emoji.svg";
-import Chat from "../../public/chat.svg";
-import Stack from "../../public/stack.svg";
-import Toolbox from "../../public/toolbox.svg";
-
-export const PAYMENT_TYPES_STICKY_MODES = {
-  PRE_VIEW: "PRE_VIEW",
-  IN_VIEW: "IN_VIEW",
-  POST_VIEW: "POST_VIEW",
-};
-
-export const TABS = [
+export const PROJECTS = [
   {
-    title: "Customer",
-    content: <h1 className="text-xl text-white">Customer CONTENT</h1>,
+    title: "Virtual account",
+    source: "Bani Africa- 2022",
+    tags: ["Finance", "Payment"],
+    image: "bg-virtual-account",
+    style: { bg: "bg-[#FAFAFF]", color: "text-[#4242FF]" },
+    button: "Read Case Study",
+    slug: "virtual-account",
+    body: `Virtual accounts, also known as virtual 
+    bank accounts or virtual IBANs, are 
+    digital representations of traditional 
+    bank accounts that allow individuals 
+    and businesses to receive and make 
+    payments electronically.`,
   },
   {
-    title: "Vendors",
-    content: <h1 className="text-xl text-white">Vendors CONTENT</h1>,
-  },
-];
-
-export const CUSTOMER_DATA = [
-  {
-    icon: <Handshake />,
-    title: "Save money and time",
-    body: "Not comfortable with your total spending? Negotiate with the vendor so it’s a win for everyone. Take advantage of our subscription models  to get the most benefits. ",
-    image: "bg-iphone_14_one",
+    title: "Payment link",
+    source: "Bani Africa- 2022",
+    tags: ["Finance", "Payment"],
+    image: "bg-payment-link",
+    style: { bg: "bg-[#FFF8F9]", color: "text-[#FF425D]" },
+    button: "Read Case Study",
+    slug: "payment-link",
+    body: `A URL that leads directly to a checkout page on an e-commerce website. It is designed to make the payment process as simple and convenient as possible.`,
   },
   {
-    icon: <Emoji />,
-    title: "Eliminate Fear and Frustration",
-    body: "Establish trust in vendors by reading reviews from past clients and paying it forward by giving review on completion to ensure quality lives on.",
-    image: "bg-iphone_14_two",
+    title: "3D Exploration",
+    source: "Personal - 2022",
+    tags: ["3D Animation", "3D Asset"],
+    image: "bg-3d-exploration",
+    style: { bg: "bg-[#E2E8FF]", color: "text-[#4269FF]" },
+    button: "Link to files",
+    href: "https://drive.google.com/drive/u/0/folders/1eDJHB924GR-b0AUKEo-DuW52z1_O_ocJ",
+    body: `I did some 3D explorations while learning how to use some of the 3D software - blender and spline`,
   },
   {
-    icon: <Chat />,
-    title: "Stay in loop ",
-    body: "Track your appointments and orders in real time to ensure work is being done. ",
-    image: "bg-iphone_14_three",
-  },
-];
-export const VENDOR_DATA = [
-  {
-    icon: <Stack />,
-    title: "Streamlined management system",
-    body: "Keep your books in order digitally with the dashboard, that enables you to see your progress at a glance",
-    image: "bg-iphone_14_vendor_one",
+    title: "Introduction of VR into Airbnb bookings",
+    source: "Eco Apartment- Coming soon",
+    tags: ["Real Estate", "Payment"],
+    image: "bg-eco",
+    style: { bg: "bg-[#F8FFFA]", color: "text-[#1B3829]" },
+    button: "Coming soon",
+    href: "#",
+    body: `Experience luxury while staying in one of  our smart eco-friendly apartments through an argumented reality experience.`,
   },
   {
-    icon: <Toolbox />,
-    title: "Customisable toolkit",
-    body: "Show off your business and it’s perks with your toolkit and save productivity workhours.",
-    image: "bg-iphone_14_vendor_two",
+    title: "Interns",
+    source: "Google Certificate- 2021",
+    tags: ["Job Search", "Responsive"],
+    image: "bg-google",
+    style: { bg: "bg-[#EDF6FD]", color: "text-[#1261A0]" },
+    button: "Read more on behance",
+    href: "https://www.behance.net/gallery/124948533/UX-Case-Study-Kokun-Foundation-Website",
+    body: `Experience luxury while staying in one of  our smart eco-friendly apartments through an argumented reality experience.`,
   },
   {
-    icon: <Chat />,
-    title: "Transparency",
-    body: "An easy way to keep your customers in the loop of things so their trust in your brand grows",
-    image: "bg-iphone_14_vendor_three",
-  },
-];
-
-export const FAQS = [
-  {
-    question: "How long will it take before I get response to my bid",
-    answer:
-      "Yes, on Cleand you can easily find vendors in your locale using the search option. You can also find vendors via availability and price  ",
-  },
-  {
-    question: "Can I find vendors in my locale?",
-    answer:
-      "Yes, on Cleand you can easily find vendors in your locale using the search option. You can also find vendors via availability and price  ",
-  },
-  {
-    question: "Is it affordable?",
-    answer:
-      "Yes, on Cleand you can easily find vendors in your locale using the search option. You can also find vendors via availability and price  ",
-  },
-  {
-    question: "Can I use a subscription model instead?",
-    answer:
-      "Yes, on Cleand you can easily find vendors in your locale using the search option. You can also find vendors via availability and price  ",
+    title: "Kokun Foundation Responsive website",
+    source: "Google Certificate- 2021",
+    tags: ["Charity", "Organization"],
+    image: "bg-kokun",
+    style: { bg: "bg-[#F0ECF4]", color: "text-[#663D8F]" },
+    button: "Read more on behance",
+    href: "https://www.behance.net/gallery/124948533/UX-Case-Study-Kokun-Foundation-Website",
+    body: `Experience luxury while staying in one of  our smart eco-friendly apartments through an argumented reality experience.`,
   },
 ];
 
-export const STATES = [
-  "Abia",
-  "Adamawa",
-  "Akwa Ibom",
-  "Anambra",
-  "Bauchi",
-  "Bayelsa",
-  "Benue",
-  "Borno",
-  "Cross River",
-  "Delta",
-  "Ebonyi",
-  "Edo",
-  "Ekiti",
-  "Enugu",
-  "FCT - Abuja",
-  "Gombe",
-  "Imo",
-  "Jigawa",
-  "Kaduna",
-  "Kano",
-  "Katsina",
-  "Kebbi",
-  "Kogi",
-  "Kwara",
-  "Lagos",
-  "Nasarawa",
-  "Niger",
-  "Ogun",
-  "Ondo",
-  "Osun",
-  "Oyo",
-  "Plateau",
-  "Rivers",
-  "Sokoto",
-  "Taraba",
-  "Yobe",
-  "Zamfara",
-].map((item) => {
-  return { label: item, value: item };
-});
+export const GREETINGS = [
+  "Hello",
+  "Bonjour",
+  "Hallo",
+  "Hola",
+  "Ciao",
+  "habari",
+  "你好",
+];

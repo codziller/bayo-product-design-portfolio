@@ -1,86 +1,81 @@
-import React, { useState } from "react";
-import Button from "components/general/button/Button";
-import Input from "components/general/input/Input";
+import React, { useEffect, useRef, useState } from "react";
+import { GREETINGS } from "utils/constants";
+import useInterval from "hooks/useInterval";
+import Link from "next/link";
+
 const Banner = () => {
-  const [email, setEmail] = useState("");
+  const greetingRef = useRef(null);
+  const greetingHeight = 45;
+  const [currentGreeting, setCurrentGreeting] = useState(0);
+
+  useInterval(
+    () => {
+      handleSwitchGreeting();
+    },
+    // Delay in milliseconds or null to stop it
+    currentGreeting <= (GREETINGS.length - 1) * greetingHeight ? 2000 : null
+  );
+
+  const handleSwitchGreeting = () => {
+    setCurrentGreeting(greetingRef?.current?.scrollTop + greetingHeight);
+    greetingRef.current.scrollTop += greetingHeight;
+  };
+
   return (
-    <div className="flex flex-col md:flex-row justify-center md:justify-between items-end space-y-10 md:space-y-0 w-full h-fit min-h-[500px]  md:space-x-8 website-banner hero-section pt-[95px] md:pt-[14px] px-5 md:px-[8%] lg:px-[12%] relative bg-white z-20 overflow-y-hidden ">
-      <div className="flex flex-col justify-center items-start text-left md:basis-[60%] w-full h-fit z-[5] !ml-0 !mt-0">
-        <h1 className="text-grey-dark txt-heading mb-3 md:mb-4 font-poppins font-semibold ">
-          <span className="text-blue">Experience</span>
-          <br className="md:hidden" /> ultimate{" "}
-          <br className="hidden md:block" /> convenience
-        </h1>
-        <p className="text-grey-dark font-light txt-title mb-5 md:mb-6 ">
-          Find reliable cleaning and laundry services at your{" "}
-          <br className="hidden lg:block" />
-          fingertips from our vetted pool of providers.
+    <div className="flex flex-col md:flex-row justify-center md:justify-between items-end space-y-10 md:space-y-0 w-full h-fit min-h-[500px]  md:space-x-8 website-banner hero-section px-5 md:px-[8%] lg:px-[7%] mb-[60px] md:mb-[120px] relative bg-white z-20 overflow-hidden ">
+      <div className="flex flex-col justify-center items-start text-left md:basis-[calc(100%-375px)] w-full h-fit z-[5] pt-12 md:pt-10">
+        <p className="text-[#2C2C2E] font-thin text-base mb-5 md:mb-12 ">
+          News flash - I&apos;m currently looking for mid or senior - level
+          design role!!!
         </p>
+        <div className="flex justify-start items-center gap-2 mb-5 md:mb-4">
+          <div className="flex flex-col justify-center items-center md:items-end h-[40px] w-[40px] rounded-full bg-hero bg-cover bg-no-repeat p-0 pb-[calc(100% * 3 / 4)] bg-center" />
 
-        <p className="text-grey-dark font-medium txt-heading-alt mb-2 sm:mb-3 ">
-          Be the first to know when we launch.
-        </p>
-
-        <div className="flex flex-col sm:flex-row justify-start items-center w-full gap-4 mb-1.5">
-          <Input
-            type="email"
-            placeholder="Enter your email address"
-            value={email}
-            onChangeFunc={(val) => setEmail(val)}
-          />
-          <a
-            href="https://calendly.com/bani-inc/sales/"
-            target="_blank"
-            rel="noreferrer"
-            className="w-[60%]"
+          <div
+            ref={greetingRef}
+            className="flex flex-col justify-start items-start no-scrollbar overflow-y-auto scroll-smooth snap-mandatory snap-y h-[45px]"
+            onScroll={() => setCurrentGreeting(greetingRef?.current?.scrollTop)}
           >
-            <Button
-              text="Notify me"
-              onClick={() =>
-                window?.dataLayer?.push({
-                  event: "event",
-                  eventProps: {
-                    category: "Notify me",
-                    action: "Notify me",
-                    label: "Notify me - home hero section",
-                    value: 1,
-                  },
-                })
-              }
-              height="h-[42px] sm:h-[44px]"
-              textClass="text-[15px]"
-              className="w-full sm:w-fit"
-            />
-          </a>
+            {GREETINGS.map((item) => (
+              <span
+                key={item}
+                className="text-left leading-[45px] h-[45px] text-blue text-[20px] font-normal snap-center"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <span className="text-grey-dark font-light txt-base mb-3 md:mb-9 ">
-          *Don&apos;t worry we will not spam you {":)"}
-        </span>
-        {/* <div className="flex justify-start items-center w-full gap-4 md:gap-5 mb-6 md:mb-0">
-          <a
-            href="https://calendly.com/txt-inc/sales/"
-            target="_blank"
-            rel="noreferrer"
-            className="w-full sm:w-fit"
-          >
-            <div className="w-full sm:w-[188px] h-[54px] bg-app_store bg-contain bg-no-repeat p-0 pb-[calc(100% * 3 / 4)] bg-left sm:bg-center" />
-          </a>
-          <a
-            href="https://calendly.com/txt-inc/sales/"
-            target="_blank"
-            rel="noreferrer"
-            className="w-full sm:w-fit"
-          >
-            <div className="w-full sm:w-[188px] h-[54px] bg-google_play bg-contain bg-no-repeat p-0 pb-[calc(100% * 3 / 4)] bg-left sm:bg-center" />
-          </a>
-        </div> */}
+        <h1 className="text-grey-dark text-[40px] md:text-[55px] xlg:text-[72px] mb-3 md:mb-4 font-semibold leading-tight ">
+          Product &
+          <br className="" />
+          Motion Design
+        </h1>
+        <p className="text-[#2C2C2E] font-light text-[20px] mb-5 md:mb-6 leading-[1.9] ">
+          Hi, I&apos;m <span className="font-medium">Bayode</span>, a product
+          designer and sometimes fascinated by motion design. Currently based in
+          Lagos, Nigeria. Greatly inspired by work that improves accessibility
+          for the human race.
+        </p>
+
+        <Link
+          href="#projects"
+          scroll={false}
+          className="text-grey-dark pb-4 text-[20px] h-[40px] border-b-[3px] border-b-black transition-all duration-300 hover:border-b-[10px] cursor-pointer "
+        >
+          Selected works
+        </Link>
       </div>
 
-      <div className="flex flex-col justify-center items-center md:items-end md:basis-[40%] w-full md:max-h-[60vh] relative z-[5]">
-        <div className="flex flex-col justify-center items-center md:items-end w-full h-full min-h-[375px] rounded-[45px] bg-hero bg-contain bg-no-repeat p-0 pb-[calc(100% * 3 / 4)] bg-center z-[8]" />
+      <div className="flex flex-col justify-end items-center md:basis-[375px] w-full md:max-h-[60vh] relative z-[5]">
+        <div className="flex justify-center items-center w-full h-full ">
+          <div className="flex justify-center items-center relative h-[300px] w-[300px] sm:h-[375px] sm:w-[375px] ">
+            <div className="border-[20px] border-solid border-grey-bordercolor border-t-blue border-r-blue rounded-full w-full h-full spin-animate " />
 
-        <div className="blue-blur-bg min-w-[100%] min-h-[100%] absolute top-0 left-0" />
+            <div className="flex flex-col justify-center items-center md:items-end h-[calc(100%-40px)] w-[calc(100%-40px)] rounded-[45px] bg-hero bg-contain bg-no-repeat p-0 pb-[calc(100% * 3 / 4)] bg-left md:bg-center z-[8] absolute" />
+          </div>
+        </div>
       </div>
     </div>
   );
