@@ -21,26 +21,20 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Bayo</title>
+        <title>Bayode</title>
 
-        <meta name="description" content="Bayo" />
+        <meta name="description" content="Bayode" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Bayo" />
-        <meta
-          property="og:description"
-          content="Find reliable cleaning and laundry services at your fingertips from our vetted pool of providers."
-        />
+        <meta property="og:title" content="Bayode" />
+        <meta property="og:description" content="Product & Motion Design" />
         <meta property="og:image" content="" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@Bayo" />
-        <meta name="twitter:creator" content="@Bayo" />
-        <meta name="twitter:title" content="Bayo" />
-        <meta
-          name="twitter:description"
-          content="Find reliable cleaning and laundry services at your fingertips from our vetted pool of providers."
-        />
-        <meta name="twitter:image" content="" />
+        <meta name="twitter:site" content="@Bayode" />
+        <meta name="twitter:creator" content="@Bayode" />
+        <meta name="twitter:title" content="Bayode" />
+        <meta name="twitter:description" content="Product & Motion Design" />
+        <meta name="twitter:image" content="/images/meta-image.png" />
         <meta name="twitter:image:width" content="1024" />
         <meta name="twitter:image:height" content="512" />
         <meta name="twitter:image:alt" content="" />
