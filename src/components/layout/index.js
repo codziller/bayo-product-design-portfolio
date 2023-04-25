@@ -43,6 +43,7 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     width < 1024 ? setSidenavOpen(false) : setSidenavOpen(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

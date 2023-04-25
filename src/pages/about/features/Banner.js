@@ -54,12 +54,13 @@ const Banner = () => {
           </p>
 
           <p className="text-[#2C2C2E] font-thin text-[20px] mb-5 md:mb-6 leading-[1.9] ">
-            If I&apos;m not designing, I'm a workout enthusiasts , and enjoy
-            exploring new places. I also hosting casual and professional events.
+            If I&apos;m not designing, I&apos;m a workout enthusiasts , and
+            enjoy exploring new places. I also hosting casual and professional
+            events.
           </p>
 
           <p className="text-[#2C2C2E] font-thin text-[20px] mb-5 md:mb-6 leading-[1.9] ">
-            I'm always down to collaborate. Reach out and let's chat!
+            I&apos;m always down to collaborate. Reach out and let&apos;s chat!
           </p>
         </div>
 
