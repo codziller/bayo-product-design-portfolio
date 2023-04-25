@@ -86,7 +86,7 @@ const Layout = ({ children }) => {
 
       {sidenavOpen && (
         <div
-          className="fixed bg-black/25 top-0 left-0 w-screen h-screen z-[98]"
+          className="fixed bg-black/25 top-0 left-0 w-screen h-screen z-[98] lg:hidden"
           onClick={() => setSidenavOpen(false)}
         />
       )}
