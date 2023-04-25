@@ -38,7 +38,7 @@ const navs = [
 ];
 const Layout = ({ children }) => {
   const location = useRouter();
-  const [sidenavOpen, setSidenavOpen] = useState(true);
+  const [sidenavOpen, setSidenavOpen] = useState(false);
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
