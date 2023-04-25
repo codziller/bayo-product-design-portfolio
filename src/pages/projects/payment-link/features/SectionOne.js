@@ -158,7 +158,7 @@ const SectionOne = () => {
         </p>
 
         <p className="text-black text-[20px] font-thin leading-[1.9] mb-4">
-          If you'd like more information, feel free to contact me at{" "}
+          If you&apos;d like more information, feel free to contact me at{" "}
           <a
             className="underline font-medium"
             href="mailto:bayodeog@gmail.com"
