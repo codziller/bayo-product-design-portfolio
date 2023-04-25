@@ -3,23 +3,8 @@ import "styles/globals.css";
 import { useEffect } from "react";
 import Script from "next/script";
 import { useRouter } from "next/router";
-import { Nunito_Sans, Poppins } from "@next/font/google";
 import Head from "next/head";
 import * as gtag from "utils/gtag";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
-const nunito_sans = Nunito_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-nunito_sans",
-  weight: ["200", "300", "400", "600", "700", "800", "900"],
-});
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -37,12 +22,6 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Bayo</title>
-        <link
-          rel="preload"
-          href="https://fonts.cdnfonts.com/css/cabinet-grotesk?styles=134960,134961,134957,134958,134959,134955,134956,134954"
-          as="font"
-          type="font/woff"
-        />
 
         <meta name="description" content="Bayo" />
         <meta property="og:type" content="website" />
