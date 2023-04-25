@@ -1,10 +1,9 @@
 const pages = [
   {
     url: "/",
-    title: "Bayo",
-    description:
-      "Find reliable cleaning and laundry services at your fingertips from our vetted pool of providers.",
-    thumbnail: "",
+    title: "Bayode",
+    description: "Product & Motion Design",
+    thumbnail: "/images/meta-image.png",
   },
 ];
 export const getPageByPath = (path) =>
