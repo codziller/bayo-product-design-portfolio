@@ -40,6 +40,7 @@ const SectionOne = () => {
               onMouseOver={() => setActiveItem(title)}
               onMouseDown={() => setActiveItem(title)}
               onClick={() => setActiveItem(title)}
+              onTouchStart={() => setActiveItem(title)}
               onMouseLeave={() => setActiveItem("")}
             >
               <span className="text-[#7D7D7D] text-base font-thin mb-1.5">
