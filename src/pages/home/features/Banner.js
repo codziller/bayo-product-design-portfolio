@@ -23,7 +23,7 @@ const Banner = () => {
 
   return (
     <div className="flex flex-col md:flex-row justify-center md:justify-between items-end space-y-10 md:space-y-0 w-full h-fit min-h-[500px]  md:space-x-8 website-banner hero-section px-5 md:px-[8%] lg:px-[7%] mb-[60px] md:mb-[120px] relative bg-white z-20 overflow-hidden ">
-      <div className="flex flex-col justify-center items-start text-left md:basis-[calc(100%-375px)] w-full h-fit z-[5] pt-12 md:pt-10">
+      <div className="flex flex-col justify-center items-start text-left md:basis-[calc(100%-375px)] w-full h-fit z-[5] pt-14 lg:pt-10">
         <p className="text-[#2C2C2E] font-thin text-base mb-5 md:mb-12 ">
           News flash - I&apos;m currently looking for mid or senior - level
           design role!!!

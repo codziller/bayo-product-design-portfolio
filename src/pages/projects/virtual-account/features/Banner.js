@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col justify-center md:justify-between items-start gap-y-8 md:gap-y-0 w-full md:h-[90vh] min-h-[450px]  md:gap-x-8 hero-section px-5 md:px-[8%] lg:px-[7%] mb-[50px] md:mb-[100px] relative bg-white z-20 pt-12 md:pt-7">
+    <div className="flex flex-col justify-center md:justify-between items-start gap-y-8 md:gap-y-0 w-full md:h-[90vh] min-h-[450px]  md:gap-x-8 hero-section px-5 md:px-[8%] lg:px-[7%] mb-[50px] md:mb-[100px] relative bg-white z-20 pt-14 lg:pt-7">
       <p className="text-[#2C2C2E] font-thin text-base mb-5 md:mb-auto ">
         News flash - I&apos;m currently looking for mid or senior - level design
         role!!!

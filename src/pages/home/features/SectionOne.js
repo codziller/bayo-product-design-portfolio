@@ -37,6 +37,7 @@ const SectionOne = () => {
                 isEven(i) ? "rounded-tl-[56px]" : "rounded-tr-[56px]"
               } w-full px-8 pt-5`}
               onMouseEnter={() => setActiveItem(title)}
+              onMouseOver={() => setActiveItem(title)}
               onClick={() => setActiveItem(title)}
               onMouseLeave={() => setActiveItem("")}
             >
