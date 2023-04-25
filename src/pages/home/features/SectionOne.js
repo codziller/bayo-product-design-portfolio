@@ -38,6 +38,7 @@ const SectionOne = () => {
               } w-full px-8 pt-5`}
               onMouseEnter={() => setActiveItem(title)}
               onMouseOver={() => setActiveItem(title)}
+              onMouseDown={() => setActiveItem(title)}
               onClick={() => setActiveItem(title)}
               onMouseLeave={() => setActiveItem("")}
             >
