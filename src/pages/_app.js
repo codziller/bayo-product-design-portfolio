@@ -44,17 +44,6 @@ export default function App({ Component, pageProps }) {
           type="font/woff"
         />
 
-        <link
-          rel="preload"
-          href="/iphone_14_pro_space_black_mockup.png"
-          as="image"
-        />
-        <link rel="preload" href="/hero-image.jpeg" as="image" />
-        <link rel="preload" href="/iphone_14_two.png" as="image" />
-        <link rel="preload" href="/iphone_14_vendor_two.png" as="image" />
-        <link rel="preload" href="/iphone_14_three.png" as="image" />
-        <link rel="preload" href="/iphone_14_vendor_three.png" as="image" />
-        <link rel="preload" href="/gloves_image.jpeg" as="image" />
         <meta name="description" content="Bayo" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Bayo" />
