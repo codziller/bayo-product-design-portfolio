@@ -8,15 +8,15 @@ const Footer = () => {
   const socials = [
     {
       icon: <LinkedinIcon className="scale-[0.9]" />,
-      url: "https://facebook.com/cleand",
+      url: "https://www.linkedin.com/in/bayodegoke",
     },
     {
       icon: <InstagramIcon className="scale-[0.9]" />,
-      url: "https://instagram.com/cleand",
+      url: "https://www.instagram.com/bayothedesigner/?igshid=YmMyMTA2M2Y%3D",
     },
     {
       icon: <TwitterIcon className="scale-[0.9]" />,
-      url: "https://twitter.com/cleand",
+      url: "https://twitter.com/bayothedesigner?s=21&t=bQAKYXkayzpghItBebXgCg",
     },
   ];
 
